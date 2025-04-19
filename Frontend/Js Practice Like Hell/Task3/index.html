@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>
+      Create a form with input fields and a submit btn. use javascript to
+      validate the form and display an error message if the input feild is
+      invalid--
+    </h2>
+
+    <br />
+    <br />
+    <h4 id="error"></h4>
+    <form>
+      <label
+        >Name :
+        <input
+          type="text"
+          placeholder="type your name"
+          name="uname"
+          id="uname"
+        />
+      </label>
+
+      <label>
+        Password:
+        <input
+          type="password"
+          placeholder="type your password"
+          name="pass"
+          id="pass"
+        />
+      </label>
+
+      <label
+        >Email ID :
+        <input
+          type="email"
+          placeholder="type@gmail.com"
+          name="email"
+          id="email"
+        />
+      </label>
+      <button type="submit" id="submitBtn">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
