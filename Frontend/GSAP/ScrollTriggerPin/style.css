@@ -1,0 +1,34 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#page1{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+#page2{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 188, 116);
+}
+#page2 img{
+    height: 100%;
+    width: 20%;
+    object-fit:cover ;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#page3{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(146, 115, 74);
+}

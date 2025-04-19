@@ -1,0 +1,29 @@
+
+/*
+basics
+
+    js the language
+     basic
+     inbuilt function
+     variable
+     compilers and interpreters =>
+        js language english words use karti hai and computers english nhi samjhte , o samjhte hai 0 or 1
+        
+     window
+     types
+     conditional
+     loops
+     functions
+     arrays
+     objects
+    
+ */
+// Advance topics
+        // prototypes
+        // prototypal inheritence 
+        // asynchronous 
+        // synchronous and asynchronous
+        // es6
+        // questions
+
+
