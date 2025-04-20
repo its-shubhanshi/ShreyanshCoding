@@ -17,7 +17,7 @@ addBtn.addEventListener("click", function () {
     items = document.createElement("li");
 
     items.innerHTML += `
-            <li> ${inputTask.value} <button>Edit</button> <button>Remove</button></li>`;
+            <li> ${inputTask.value} <button>Edit</button> <button id="removeBtn">Remove</button></li>`;
     list.appendChild(items);
   }
 });
