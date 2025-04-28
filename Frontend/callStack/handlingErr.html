@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Handling Rejection with await keyword in Js</h1>
+
+    <script>
+      "use strict";
+
+      let h1 = document.querySelector("h1");
+
+      function colorChange(color, delay) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            let num = Math.floor(Math.random() * 10) + 1;
+            console.log(num);
+
+            if (num > 4) {
+              h1.style.color = color;
+              resolve("color changed");
+            } else {
+              reject("Promise was rejected");
+            }
+          }, 1000);
+        });
+      }
+
+      async function colorChangeOutout() {
+        try {
+          await colorChange("orange", 1000);
+          await colorChange("red", 1000);
+          await colorChange("blue", 1000);
+          await colorChange("yellow", 1000);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      colorChangeOutout();
+    </script>
+  </body>
+</html>

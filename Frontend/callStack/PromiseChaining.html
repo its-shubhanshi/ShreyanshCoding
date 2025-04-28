@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>refact Promises Javascript</h1>
+
+    <script>
+      "use strict";
+
+      let h1 = document.querySelector("h1");
+
+      function colorChange(color, delay) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            h1.style.color = color;
+            resolve("color changed");
+          }, 1000);
+        });
+      }
+
+      colorChange("blue", 1000)
+        .then(() => {
+          console.log("blue color was completed !");
+          return colorChange("orange", 1000);
+        })
+        .then(() => {
+          console.log("orange color was completed !");
+          return colorChange("purple", 3000);
+        })
+        .then(() => {
+          console.log("purple color was completed !");
+          return colorChange("red", 4000);
+        })
+        .then(() => {
+          console.log("red color was completed");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

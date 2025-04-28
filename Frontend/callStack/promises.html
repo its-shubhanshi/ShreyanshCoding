@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Promises Javascript</h1>
+
+    <script>
+      "use strict";
+
+      function saveToDB(data, sucess, failure) {
+        let internetSpedd = Math.floor(Math.random() * 10) + 1;
+        if (internetSpedd > 5) {
+          sucess(data);
+        } else {
+          failure();
+        }
+      }
+      saveToDB(
+        "mera mobile",
+        (data) => {
+          console.log("your data was saved , ", data);
+          saveToDB("Second data",(data)=>{
+            console.log("your second data was saved", data);
+            
+          },()=>{
+            console.log("second week connection");
+            
+          })
+        },
+        () => {
+          console.log("week connection");
+        }
+      );
+
+      
+
+
+      
+    </script>
+  </body>
+</html>
